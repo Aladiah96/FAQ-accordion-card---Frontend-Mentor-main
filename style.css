@@ -150,8 +150,10 @@ h2 img {
 
     .box {
         display: block;
-        margin: 90px 0 0 -160px;
-        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.8));
+        margin: 235px 0 0 425px;
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+        position: absolute;
+        z-index: 1;
     }
 
     .perguntas {
@@ -169,9 +171,11 @@ h2 img {
         max-width: 50%;
         margin: 10rem auto;
         padding: 3%;
+        position: relative;
         background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
         background-repeat: no-repeat;
         background-position: -80px 100px, -570px -250px;
+        overflow: hidden;
         /* background-size: 40%; */
     } 
 
