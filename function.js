@@ -1,17 +1,23 @@
-window.addEventListener("load", function () {
-const titulo = document.querySelector(".titulo")
-const resposta = document.querySelector(".resposta")
-const seta = document.querySelector(".seta")
+window.addEventListener("load", function() {
 
-titulo.addEventListener ("click", e => {
-    if (resposta.style.display == "none") {
-            resposta.style.display = "block"
-            titulo.style.color = "black"
-            seta.style.transform= "scaleY(-1)"
-     } else {
-            resposta.style.display = "none"
-            titulo.style.color = "#787887"
-            seta.style.transform= "scaleY(1)"
-     }
+       var acc = document.getElementsByClassName("titulo");
+       var i;
+       
+       for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                     /* Toggle between adding and removing the "active" class,
+                     to highlight the button that controls the panel */
+                     this.classList.toggle("active");
+                     
+                     /* Toggle between hiding and showing the active panel */
+                     var panel = this.nextElementSibling;
+                     if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                     } else {
+                            panel.style.display = "block";
+                     }
+              });
+       }
 })
-});
+
+

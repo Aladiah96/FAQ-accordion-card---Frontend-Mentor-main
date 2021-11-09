@@ -118,6 +118,10 @@ h2 img {
        line-height: 2;
        color: var(--clr-dark-grayish-blue);
     }
+
+    .active, .accordion:hover {
+        color: black;
+      }
     
     .btn {
         display: flex;
